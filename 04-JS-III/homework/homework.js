@@ -26,8 +26,9 @@ function incrementarPorUno(array) {
   // Aumenta cada entero por 1
   // y devuelve el array
   // Tu código:
+  var matriz = [];
   for (let i = 0; i < array.length; i++) {
-    var matriz = array[i+1];
+    matriz.push(array[i]+1);
     } return matriz;
 }
 
@@ -57,9 +58,7 @@ function dePalabrasAFrase(palabras) {
   // con espacios entre cada palabra
   // Ejemplo: ['Hello', 'world!'] -> 'Hello world!'
   // Tu código:
-  for (let i = 0; i < palabras.length; i++) {
-    return palabras[i];
-  }
+  return palabras.join(" ");
 }
 
 
@@ -67,6 +66,7 @@ function arrayContiene(array, elemento) {
   // Comprueba si el elemento existe dentro de "array"
   // Devuelve "true" si está, o "false" si no está
   // Tu código:
+  return array.includes(elemento);
 }
 
 
@@ -74,14 +74,21 @@ function agregarNumeros(numeros) {
   // "numeros" debe ser un arreglo de enteros (int/integers)
   // Suma todos los enteros y devuelve el valor
   // Tu código:
+  let contador = 0; 
+  for(let i = 0; i < numeros.length; i++){
+    contador = numeros[i]+contador;
+  } return contador;
 }
-
 
 function promedioResultadosTest(resultadosTest) {
   // "resultadosTest" debe ser una matriz de enteros (int/integers)
   // Itera (en un bucle) los elementos del array, calcula y devuelve el promedio de puntajes
   // Tu código:
-}
+  let contador = 0;
+  for (let i = 0; i < resultadosTest.length; i++) {
+    contador = resultadosTest.length[i] + contador;
+  } return contador/resultadosTest.length;
+} 
 
 
 function numeroMasGrande(numeros) {
