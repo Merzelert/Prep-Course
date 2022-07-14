@@ -86,7 +86,7 @@ function promedioResultadosTest(resultadosTest) {
   // Tu código:
   let contador = 0;
   for (let i = 0; i < resultadosTest.length; i++) {
-    contador = resultadosTest.length[i] + contador;
+    contador = resultadosTest[i] + contador;
   } return contador/resultadosTest.length;
 } 
 
@@ -95,6 +95,7 @@ function numeroMasGrande(numeros) {
   // "numeros" debe ser una matriz de enteros (int/integers)
   // Devuelve el número más grande
   // Tu código:
+  return Math.max(...numeros);
 }
 
 
@@ -102,6 +103,11 @@ function multiplicarArgumentos() {
   // Usa la palabra clave `arguments` para multiplicar todos los argumentos y devolver el producto
   // Si no se pasan argumentos devuelve 0. Si se pasa un argumento, simplemente devuélvelo
   // Escribe tu código aquí:
+  if (arguments.length === 0) {
+    return 0;
+  } else if (arguments.length<=1) {
+    return arguments[0];
+  }
 }
 
 
