@@ -180,7 +180,7 @@ function mesesDelAño(array) {
       meses.push(array[i]);
     }
   }
-  if (meses.includes("Enero") || meses.includes("Marzo") || meses.includes("Noviembre")) {
+  if (meses.includes("Enero") && meses.includes("Marzo") && meses.includes("Noviembre")) {
     return meses;
   } else {
     return "No se encontraron los meses pedidos";
@@ -237,11 +237,11 @@ function continueStatement(numero) {
   // Tu código:
   let caja = [];
   let sum = numero; 
-  for (let i = 0; i < 11; i++){
-    sum = sum + 2;
+  for (let i = 0; i < 10; i++){
     if (i === 5){
       continue;
     } else {
+      sum = sum + 2;
       caja.push(sum);
     }
   }
