@@ -105,9 +105,14 @@ function multiplicarArgumentos() {
   // Escribe tu código aquí:
   if (arguments.length === 0) {
     return 0;
-  } else if (arguments.length<=1) {
+  } else if (arguments.length===1) {
     return arguments[0];
-  }
+  } else {
+    let multi = 1;
+    for (let i = 0; i < arguments.length; i++){
+      multi = arguments[i] * multi; 
+    } return multi;
+  } 
 }
 
 
